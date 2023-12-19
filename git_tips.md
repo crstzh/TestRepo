@@ -3,6 +3,7 @@
 + Pushes the local 'main' branch to the 'main' branch on the remote repository (origin).
 + Sets up tracking so that your local 'main' branch will track the 'main' branch on the remote repository.
 
+
 # git branch -u origin/main
 + This command sets up tracking for the current branch to track the 'main' branch on the 'origin' remote
 
@@ -15,3 +16,42 @@
     - git remote add origin &lt;**repository-url**&gt;
 
 + **Note** 以上命令中的 &lt;**repository-url**&gt;是你远程仓库的地址。你可以在 GitHub 或其他 Git 托管服务中找到这个地址。
+
+# git remote add origin
++ [git remote add] (https://github.com/username/repo.git)
++ Here, &lt;**remote-name**&gt; is a short alias for the remote repository, and &lt;**remote-url**&gt; is the URL of the remote repository. After you have added a remote, you can use the remote name to refer to the repository in various Git commands, such as fetching changes from the remote or pushing changes to it.
+
+
+# git pull origin master
+**git pull origin master**
++ Fetching changes from a remote repository (origin in this case) 
++ Merging those changes into the current branch (master in this case).
+
+# 创建版本库
+makedir **learngit**
+cd **learngit**
+pwd
+
+
+# 初始化版本库
+- git init
+## Initialized empty Git repository in /Users/michael/learngit/.git/
+
+ - **git add** readme.txt
+ - **git commit -m "readme file"** readme.txt
+ - 
+
+ # 合并提交
+:::mermaid
+    gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+:::
+
